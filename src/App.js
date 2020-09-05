@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./assets/_base.scss";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { AnimatePresence, motion } from "framer-motion";
 
+import MasterContextProvider from "./context/MasterContext";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect, useLocation, useHistory } from "react-router-dom";
+import { far, faCircle } from "@fortawesome/free-regular-svg-icons";
+
+import { Presentation } from "./layout/blueprints/Presentation";
+import { Routes } from "./Routes";
+library.add(fas, far, faMoon, faCircle);
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MasterContextProvider>
+      {/* <AnimatePresence> */}
+      <Router>
+        <Routes />
+      </Router>
+    </MasterContextProvider>
   );
 }
 

@@ -1,0 +1,140 @@
+.covid-main {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.covid-header {
+  //   text-align: center;
+  //   position: relative;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   font-size: 30px;
+  //   font-weight: 300;
+  //   margin: 0 auto;
+  //   width: 80%;
+  //   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.covid-header > h1 {
+  color: #fc3c3c;
+  font-size: 2rem;
+}
+
+.covid-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.covid-left-side {
+  flex: 0.9;
+}
+
+.covid-right-side {
+  display: flex;
+  flex-direction: columns;
+}
+.covid-right-side .covid-information {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.covid-chart {
+  flex-grow: 1;
+}
+
+.covid-chart-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.covid-table {
+  margin-top: 20px;
+  overflow: scroll;
+  height: 400px;
+  color: #6a5d5d;
+}
+
+.covid-table tr {
+  display: flex;
+  justify-content: space-between;
+}
+.covid-table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
+
+.covid-map {
+  height: 500px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 16px;
+  box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.covid-map .leaflet-container {
+  height: 100%;
+}
+.info-flag img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.info-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+.info-container {
+  width: 150px;
+}
+
+.info-flag {
+  height: 80px;
+  width: 100%;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.info-confirmed,
+.info-recovered,
+.info-deaths {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.covid-infoBox {
+  flex: 1;
+  cursor: pointer;
+  border-color: black;
+}
+
+.covid-infoBox:not(:last-child) {
+  margin-right: 10px;
+}
+
+.covid-infoBox--selected {
+  border-top: 10px solid greenyellow;
+}
+
+.covid-infoBox--red {
+  border-color: red;
+}
+
+.covid-cases {
+  color: #cc1034;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 990px) {
+  .covid-main {
+    flex-direction: column;
+  }
+}

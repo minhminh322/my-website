@@ -50,7 +50,7 @@ body {
 .dark-mode {
   // background-color: #1a1919;
   background-color: #4b2e83;
-  color: #999;
+  color: #85754d;
 }
 
 .app {
@@ -72,9 +72,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 8%;
+  height: 6%;
   padding: 20px;
   border-bottom: 1px solid lightgray;
+}
+.app-header-left-side {
+  width: 100%;
+  // height: auto;
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-header-left-side > h1 {
+  font-family: "Droid serif", serif;
+  font-size: 42px;
+  font-weight: 500;
+  padding: 20px;
+  // font-style: italic;
+  // line-height: 44px;
+  // margin: 0 0 12px;
+  text-align: center;
 }
 
 .app-header-right-side {
@@ -96,12 +115,10 @@ body {
   width: 40px;
 }
 .app-main {
-  // padding: 20px;
+  padding: 20px;
   overflow: hidden;
   // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   height: 92%;
-  // WebkitTransition: "all .5s ease",
-  // MozTransition: "all .5s ease",
 }
 
 .home-main {

@@ -8,9 +8,9 @@ export const InfoBox = ({ title, cases, isRed, active, total, ...props }) => {
       className={`covid-infoBox ${active && "covid-infoBox--selected"} ${isRed && "covid-infoBox--red"}`}
     >
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title as="h6">{title}</Card.Title>
         <Card.Text className="covid-cases">{cases}</Card.Text>
-        <Card.Text className="covid-total">{total}</Card.Text>
+        <Card.Text className="covid-total">{total} Total</Card.Text>
       </Card.Body>
     </Card>
   );

@@ -4,15 +4,16 @@ import Switch from "react-switch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { MasterContext } from "../../../context/MasterContext";
+import { MasterContext } from "../../../contexts/MasterContext";
 import HeaderUserbox from "./HeaderUserBox";
 import avatar from "../../../assets/data/avatar.png";
 
 const HeaderMain = () => {
-  const { master, toggleTheme, toggleSidebar } = useContext(MasterContext);
+  const { master, toggleTheme } = useContext(MasterContext);
   return (
     <Fragment>
       <div className="app-header-left-side">
+        <h1>{master.header.title}</h1>
         <Badge pill variant="info">
           In Progress
         </Badge>

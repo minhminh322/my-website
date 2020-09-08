@@ -2,7 +2,7 @@ import React, { useContext, Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route, Link, Redirect, useLocation, useHistory } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import HeaderMain from "./Header/HeaderMain";
-import { MasterContext } from "../../context/MasterContext";
+import { MasterContext } from "../../contexts/MasterContext";
 import { LeftSidebar } from "./LeftSidebar";
 import MyHomePage from "../../features/Home/HomeMain";
 import PomodoroApp from "../../features/PomodoroApp/PomodoroMain";

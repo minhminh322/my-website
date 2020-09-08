@@ -5,29 +5,42 @@ import { ProSidebar, SidebarContent, Menu, MenuItem, SubMenu } from "react-pro-s
 import { BrowserRouter as Router, Switch, Route, Link, Redirect, useLocation, useRouteMatch } from "react-router-dom";
 import { SidebarHeader } from "./Sidebar/SidebarHeader";
 import { SidebarFooter } from "./Sidebar/SidebarFooter";
-import { MasterContext } from "../../context/MasterContext";
+import { MasterContext } from "../../contexts/MasterContext";
 
 export const LeftSidebar = () => {
-  const { master, toggleSidebar } = useContext(MasterContext);
+  const { master, changeHeaderTitle } = useContext(MasterContext);
   const collapsed = master.sidebar.collapsed;
-  let match = useRouteMatch();
+  // let match = useRouteMatch();
   return (
     <Fragment>
       <ProSidebar collapsed={collapsed}>
         <SidebarHeader />
         <SidebarContent>
           <Menu iconShape="circle">
-            <MenuItem icon={<FaGem />}>
+            <MenuItem
+              icon={<FaGem />}
+              onClick={() => {
+                changeHeaderTitle("My Dashboard");
+              }}
+            >
               {/* {`${match.url}/MyDashboard`} */}
               <Link to="/MyDashboard">Dashboard</Link>
             </MenuItem>
 
             <SubMenu title="My Workspace" icon={<FaHeart />}>
-              <MenuItem>
+              <MenuItem
+                onClick={() => {
+                  changeHeaderTitle("COVID-19 Tracker");
+                }}
+              >
                 {/* {`${match.url}/PomodoroApp`} */}
                 <Link to="/CovidTrackerApp">COVID-19 Tracker App</Link>
               </MenuItem>
-              <MenuItem>
+              <MenuItem
+                onClick={() => {
+                  changeHeaderTitle("Pomodoro App");
+                }}
+              >
                 {/* {`${match.url}/PomodoroApp`} */}
                 <Link to="/PomodoroApp">PomodoroApp</Link>
               </MenuItem>
@@ -38,7 +51,7 @@ export const LeftSidebar = () => {
             </SubMenu>
           </Menu>
         </SidebarContent>
-        <SidebarFooter />
+        {/* <SidebarFooter /> */}
       </ProSidebar>
     </Fragment>
   );

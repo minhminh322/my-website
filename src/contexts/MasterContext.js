@@ -13,12 +13,23 @@ const MasterContextProvider = (props) => {
       isLightTheme: true,
     },
     sidebar: {
-      collapsed: false,
+      collapsed: true,
       light: "#ffffff",
       dark: "#000000",
     },
+    header: {
+      title: "My Dashboard",
+    },
   });
-
+  const changeHeaderTitle = (newTitle) => {
+    setMaster((master) => ({
+      ...master,
+      header: {
+        ...master.header,
+        title: newTitle,
+      },
+    }));
+  };
   const toggleTheme = () => {
     setMaster((master) => ({
       ...master,
@@ -40,7 +51,9 @@ const MasterContextProvider = (props) => {
   };
 
   return (
-    <MasterContext.Provider value={{ master, toggleTheme, toggleSidebar }}>{props.children}</MasterContext.Provider>
+    <MasterContext.Provider value={{ master, toggleTheme, toggleSidebar, changeHeaderTitle }}>
+      {props.children}
+    </MasterContext.Provider>
   );
 };
 

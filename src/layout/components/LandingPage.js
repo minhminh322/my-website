@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Spinner } from "react-bootstrap";
 import ReactTypingEffect from "react-typing-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
@@ -30,6 +30,7 @@ const LandingPage = () => {
             eraseDelay={700}
           /> */}
           {/* <div className="landing-button"> */}
+
           <Row>
             <Col md={4}>
               <Button

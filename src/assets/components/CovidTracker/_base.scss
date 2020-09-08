@@ -4,28 +4,15 @@
   padding: 20px;
 }
 .covid-header {
-  //   text-align: center;
-  //   position: relative;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   font-size: 30px;
-  //   font-weight: 300;
-  //   margin: 0 auto;
-  //   width: 80%;
-  //   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-bottom: 20px;
 }
-
-.covid-header > h1 {
-  color: #fc3c3c;
-  font-size: 2rem;
+#dropdown-basic-button {
+  background-color: #85754d;
+  border-color: #85754d;
 }
-
 .covid-stats {
   display: flex;
   justify-content: space-between;
@@ -56,7 +43,7 @@
   margin-top: 20px;
   overflow: scroll;
   height: 400px;
-  color: #6a5d5d;
+  color: #4b2e83;
 }
 
 .covid-table tr {
@@ -64,7 +51,7 @@
   justify-content: space-between;
 }
 .covid-table tr:nth-of-type(odd) {
-  background-color: #f3f2f8;
+  // background-color: #f3f2f8;
 }
 
 .covid-map {
@@ -79,6 +66,12 @@
 .covid-map .leaflet-container {
   height: 100%;
 }
+
+.dropdown-menu {
+  height: auto;
+  max-height: 500px;
+  overflow-x: hidden;
+}
 .info-flag img {
   width: 100px;
   border-radius: 5px;
@@ -87,7 +80,7 @@
 .info-name {
   font-size: 20px;
   font-weight: bold;
-  color: #555;
+  // color: black;
 }
 
 .info-container {
@@ -111,7 +104,11 @@
 .covid-infoBox {
   flex: 1;
   cursor: pointer;
-  border-color: black;
+  border-color: #85754d;
+}
+.covid-infoBox:hover {
+  background-color: #85754d;
+  // opacity: 0.4;
 }
 
 .covid-infoBox:not(:last-child) {
@@ -119,12 +116,12 @@
 }
 
 .covid-infoBox--selected {
-  border-top: 10px solid greenyellow;
+  border-top: 10px solid #85754d;
 }
 
-.covid-infoBox--red {
-  border-color: red;
-}
+// .covid-infoBox--red {
+//   border-color: #4b2e83;
+// }
 
 .covid-cases {
   color: #cc1034;

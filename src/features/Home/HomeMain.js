@@ -7,7 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import { v1 as uuidv1 } from "uuid";
-import { MasterContext } from "../../context/MasterContext";
+import { MasterContext } from "../../contexts/MasterContext";
 import { Button } from "reactstrap";
 import husky from "../../assets/components/Home/husky.jpg";
 

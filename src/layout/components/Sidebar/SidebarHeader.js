@@ -2,14 +2,14 @@ import React, { useContext } from "react";
 import { Button } from "reactstrap";
 import UseAnimations from "react-useanimations";
 import menu3 from "react-useanimations/lib/menu3";
-import { MasterContext } from "../../../context/MasterContext";
+import { MasterContext } from "../../../contexts/MasterContext";
 
 export const SidebarHeader = () => {
   const { master, toggleSidebar } = useContext(MasterContext);
   return (
     <div className="sidebar-header">
       {/* <div className="sidebar-brand">Minh's Dashboard</div> */}
-      <div role="button">
+      <div className="toggle-siderbar" role="button">
         <UseAnimations
           reverse={!master.sidebar.collapsed}
           onClick={toggleSidebar}
